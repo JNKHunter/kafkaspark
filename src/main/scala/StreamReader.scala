@@ -8,7 +8,7 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 /**
   * Created by John on 5/29/17.
   */
-class StreamReader {
+class StreamReader(param:Map[String, Object]) {
   val sparkConf = new SparkConf().setAppName("Log Reader")
   val ssc = new StreamingContext(sparkConf, Seconds(2))
 
